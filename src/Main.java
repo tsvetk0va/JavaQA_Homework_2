@@ -1,33 +1,8 @@
 public class Main {
-
     public static void main(String[] args) {
-
-
-        // Объявляете переменные для входных данных и
-        // параметров программы: одну для хранения
-        // стоимости билета, другую для хранения количества
-        // рублей для одной бонусной милли
-        int ticketPrice = 5700;
-        int mileCost = 20;
-
-        // Рассчитываете количество бонусных милль, используя
-        // значения заведённых переменных.
-        int countOfMiles = ticketPrice / mileCost;
-
-        // Ответ сохраняете в
-        // новую переменную и выводите на экран
-        System.out.println("Вам начислено " + countOfMiles + " миль за перелёт!");
-
-
-
-
-
-
-
-
-
-
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println(miles);
     }
-
-
 }
